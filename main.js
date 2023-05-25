@@ -61,21 +61,39 @@ function game(playerSelection) {
   if (countPlayer >= 5 || countComputer >= 5) {
     countPlayer = 0;
     countComputer = 0;
+    punktePDiv.textContent = countPlayer;
+    punkteCDiv.textContent = countComputer;
   }
   
-  let whoWon = playRound(playerSelection);
-  
-  if (whoWon === 0) {
-    ausgabeDiv.textContent = "A draw!";
-  } else if (whoWon === 1) {
-    countComputer++;
-    punkteCDiv.textContent = countComputer;
-    ausgabeDiv.textContent = "You lose!";
-  } else {
-    countPlayer++;
+  function game(playerSelection) {
+    if (countPlayer >= 5 || countComputer >= 5) {
+      countPlayer = 0;
+      countComputer = 0;
+      punktePDiv.textContent = countPlayer;
+      punkteCDiv.textContent = countComputer;
+    }
+    let whoWon = playRound(playerSelection);
+    if (whoWon === 0) {
+      ausgabeDiv.textContent = "A draw!";
+    } else if (whoWon === 1) {
+      countComputer++;
+      ausgabeDiv.textContent = "You lose!";
+    } else {
+      countPlayer++;
+      ausgabeDiv.textContent = "You win!";
+    }
     punktePDiv.textContent = countPlayer;
-    ausgabeDiv.textContent = "You win!";
-  } 
+    punkteCDiv.textContent = countComputer;
+    if (countPlayer >= 5 || countComputer >= 5) {
+      countPlayer = 0;
+      countComputer = 0;
+      punktePDiv.textContent = countPlayer;
+      punkteCDiv.textContent = countComputer;
+      ausgabeDiv.textContent = "-";
+    }
+  }
 }
+  
+
 
 init();
