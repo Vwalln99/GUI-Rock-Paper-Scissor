@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/7c1106c071.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Rock-Scissor-Paper</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Rock | Paper | Scissor</h1>
+        <div id="punkteboard">
+            <div class="computer">
+              Computer
+            </div>
+            <div id="computer_score">
+                0
+            </div>
+            <div class="player">
+                Player
+            </div>
+            <div id="player_score">
+                0
+            </div>
+            <div id="computer_spielzug" class="computer">
+                Spielzug
+                <span class="comp-choice"></span>
+            </div>
+        </div>
+
+        <div id="gameboard">
+            <div class="icon" id="rock">
+                <p>
+                    <i class="fa-regular fa-hand-back-fist"></i>
+                </p>
+            </div>
+            <div class="icon" id="paper">
+                <p>
+                    <i class="fa-regular fa-hand"></i>
+                </p>
+            </div>
+            <div class="icon" id="scissors">
+                <p>
+                    <i class="fa-regular fa-hand-scissors"></i>
+            </div>
+        </div>
+        <div id="ausgabe">
+            -
+        </div>
+        <div id="reset">
+            <button type="submit" id="clear">Reset</button>
+
+        </div>
+    </div>
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
