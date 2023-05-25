@@ -11,6 +11,7 @@ clearbtn.addEventListener("click", () => {
   punkteCDiv.textContent="0";
   punktePDiv.textContent="0";
   ausgabeDiv.textContent = "-";
+  spielzug.textContent="Spielzug";
 }, false);
 
 function computerPlay() {
