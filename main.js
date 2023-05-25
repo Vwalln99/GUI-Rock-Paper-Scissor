@@ -65,35 +65,32 @@ function game(playerSelection) {
     punkteCDiv.textContent = countComputer;
   }
   
-  function game(playerSelection) {
-    if (countPlayer >= 5 || countComputer >= 5) {
-      countPlayer = 0;
-      countComputer = 0;
-      punktePDiv.textContent = countPlayer;
-      punkteCDiv.textContent = countComputer;
-    }
-    let whoWon = playRound(playerSelection);
-    if (whoWon === 0) {
-      ausgabeDiv.textContent = "A draw!";
-    } else if (whoWon === 1) {
-      countComputer++;
-      ausgabeDiv.textContent = "You lose!";
-    } else {
-      countPlayer++;
-      ausgabeDiv.textContent = "You win!";
-    }
-    punktePDiv.textContent = countPlayer;
-    punkteCDiv.textContent = countComputer;
-    if (countPlayer >= 5 || countComputer >= 5) {
+  let whoWon = playRound(playerSelection);
+  
+  if (whoWon === 0) {
+    ausgabeDiv.textContent = "A draw!";
+  } else if (whoWon === 1) {
+    countComputer++;
+    ausgabeDiv.textContent = "You lose!";
+  } else {
+    countPlayer++;
+    ausgabeDiv.textContent = "You win!";
+  }
+  
+  punktePDiv.textContent = countPlayer;
+  punkteCDiv.textContent = countComputer;
+  
+  if (countPlayer >= 5 || countComputer >= 5) {
+    setTimeout(() => {
       countPlayer = 0;
       countComputer = 0;
       punktePDiv.textContent = countPlayer;
       punkteCDiv.textContent = countComputer;
       ausgabeDiv.textContent = "-";
-    }
+    }, 2000);
   }
 }
-  
+
 
 
 init();
