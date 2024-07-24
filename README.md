@@ -11,3 +11,4 @@ Nach 5 gewonnen Runden fängt der Punktezähler wieder von null an.
 Mit dem Reset-Button wird der Anfangszustand wiederhergestellt.
 
 Viel Spaß beim Spielen!
+https://vwalln99.github.io/GUI-Rock-Paper-Scissor/
